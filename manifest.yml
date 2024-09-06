@@ -1,0 +1,8 @@
+---
+name: Sol Status 2
+description: |-
+   Sol Node Status
+category: System
+subcategory: System Information
+icon: fa://bar-chart
+show_in_menu: true

@@ -1,0 +1,40 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    ffi (1.15.5)
+    minitest (5.18.0)
+    mocha (2.0.2)
+      ruby2_keywords (>= 0.0.5)
+    mustermann (3.0.0)
+      ruby2_keywords (~> 0.0.1)
+    ood_core (0.23.5)
+      ffi (~> 1.9, >= 1.9.6)
+      ood_support (~> 0.0.2)
+      rexml (~> 3.2)
+    ood_support (0.0.5)
+    rack (2.2.7)
+    rack-protection (3.0.6)
+      rack
+    rake (13.0.6)
+    rexml (3.2.5)
+    ruby2_keywords (0.0.5)
+    sinatra (3.0.6)
+      mustermann (~> 3.0)
+      rack (~> 2.2, >= 2.2.4)
+      rack-protection (= 3.0.6)
+      tilt (~> 2.0)
+    tilt (2.1.0)
+
+PLATFORMS
+  x86_64-linux
+
+DEPENDENCIES
+  minitest
+  mocha
+  ood_core (~> 0.11)
+  rake
+  rexml
+  sinatra
+
+BUNDLED WITH
+   2.2.33
