@@ -41,6 +41,16 @@ bin/setup
 
 3. Update the mainifest.yml to reflect the application name and location in the menu that you would like this app to appear.
 
+```yml
+name: System Status
+description: |-
+   HPC node status
+category: System
+subcategory: System Information
+icon: fa://bar-chart
+show_in_menu: true
+```
+
 ## Verification
 
 To verify that the app is working correctly:

@@ -1,7 +1,7 @@
 ---
-name: Sol Status 2
+name: System Status
 description: |-
-   Sol Node Status
+   HPC node status
 category: System
 subcategory: System Information
 icon: fa://bar-chart
