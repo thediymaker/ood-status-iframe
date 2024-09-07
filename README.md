@@ -19,12 +19,17 @@ This is a simplified version of the OSC Status App, streamlined to provide essen
 ```bash
 cd /var/www/ood/apps/sys/
 git clone https://github.com/thediymaker/ood-status-iframe.git
-cd ood-status-iframe
 ```
-
-2. Configure the bundle path and run setup:
+2. set permissions on the directory, for example, 755
 
 ```bash
+chmod -R 755 ood-status-iframe
+```
+
+3. Configure the bundle path and run setup to verify functionality:
+
+```bash
+cd ood-status-iframe
 bin/bundle config --local --path vendor/bundle
 bin/setup
 ```
