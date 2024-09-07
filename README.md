@@ -1,6 +1,6 @@
 # Open OnDemand Status iFrame App
 
-This is a simplified version of the OSC Status App, streamlined to provide essential functionality for Open OnDemand integration. It allows you to embed an external dashboard (such as the [HPC Dashboard](https://github.com/thediymaker/slurm-node-dashboard)) within your Open OnDemand interface.
+This is a simplified version of the OSC Status App, streamlined to provide essential functionality for embedding an iframe in your Open OnDemand instance. It allows you to embed an external dashboard (such as the [HPC Dashboard](https://github.com/thediymaker/slurm-node-dashboard)) within your Open OnDemand interface.
 
 ## Features
 
@@ -11,8 +11,6 @@ This is a simplified version of the OSC Status App, streamlined to provide essen
 ## Prerequisites
 
 - Open OnDemand installation
-- Ruby (version compatible with your Open OnDemand installation)
-- Git
 
 ## Installation
 
@@ -40,6 +38,8 @@ bin/setup
 ```erb
 <iframe src="https://your-external-dashboard-url.com" ...>
 ```
+
+3. Update the mainifest.yml to reflect the application name and location in the menu that you would like this app to appear.
 
 ## Verification
 
