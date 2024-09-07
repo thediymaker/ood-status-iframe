@@ -72,9 +72,9 @@ Once installed and configured, users can access the embedded dashboard through t
 
 If you encounter issues:
 
-- Check that the app directory permissions are correct.
-- Verify that the URL in `views/layout.erb` is accessible from the Open OnDemand server.
-- Review Open OnDemand logs for any error messages.
+- Check that the app directory permissions are correct, this is a common one, if your app doesnt show up in the browser, its either an issue with permissions or the local user webserver needs a restart.
+- Verify that the URL in `views/layout.erb` is accessible by the user and the Open OnDemand server.
+- Review Open OnDemand, and system logs for any error messages.
 
 ## Contributing
 
