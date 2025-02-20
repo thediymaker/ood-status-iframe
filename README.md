@@ -25,8 +25,8 @@ cd ood-status-iframe
 2. Create a virtual environment and install requirements
 
 ```bash
-python3 -m venv iframe-status-page
-source iframe-status-page/bin/activate
+python3 -m venv ood-status-iframe
+source ood-status-iframe/bin/activate
 python3 -m pip install -r requirements.txt
 ```
 

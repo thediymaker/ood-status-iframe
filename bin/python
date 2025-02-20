@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
 SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
-source $SCRIPT_DIR/../iframe/bin/activate
+source $SCRIPT_DIR/../ood-status-iframe/bin/activate
 
 exec /bin/env python3 "$@"
