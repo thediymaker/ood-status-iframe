@@ -51,13 +51,13 @@
 <body>
   <header>
     <nav>
-      <a href="<%=dashboard_url%>" class="nav-link"><%= dashboard_title %></a>
+      <a href="{{ dashboard_url }}" class="nav-link">{{ dashboard_title }}</a>
       <span class="nav-separator">&gt;</span>
-      <a href="<%=url("/")%>" class="nav-link">System Status</a>
+      <a href="{{ url_for('index') }}" class="nav-link">System Status</a>
     </nav>
   </header>
   <div class="iframe-container">
-    <iframe src="https://your-url-here.com"></iframe>
+    <iframe src="https://your-external-dashboard-url.com"></iframe>
   </div>
 </body>
 </html>

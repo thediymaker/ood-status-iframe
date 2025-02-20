@@ -1,16 +1,17 @@
 # Open OnDemand iFrame App
 
-This is a simplified version of the OSC Status App, streamlined to provide essential functionality for embedding an iframe in your Open OnDemand instance. It allows you to embed an external dashboard (such as the [Slurm Dashboard](https://github.com/thediymaker/slurm-node-dashboard)) within your Open OnDemand interface.
+This is a simplified python iframe app and allows for easy streamlining of an iframe in your Open OnDemand instance. It allows you to do things like embed an external dashboard (such as the [Slurm Dashboard](https://github.com/thediymaker/slurm-node-dashboard)) within your Open OnDemand interface.
 
 ## Features
 
-- Lightweight Ruby app for Open OnDemand
-- Embeds external dashboards using an iFrame
+- Lightweight Python App
+- Embeds external sites using an iFrame
 - Easy to install and configure
 
 ## Prerequisites
 
 - Open OnDemand installation
+- Python3
 
 ## Installation
 
@@ -19,24 +20,25 @@ This is a simplified version of the OSC Status App, streamlined to provide essen
 ```bash
 cd /var/www/ood/apps/sys/
 git clone https://github.com/thediymaker/ood-status-iframe.git
-```
-2. set permissions on the directory, for example, 755
-
-```bash
-chmod -R 755 ood-status-iframe
-```
-
-3. Configure the bundle path and run setup to verify functionality:
-
-```bash
 cd ood-status-iframe
-bin/bundle config --local --path vendor/bundle
-bin/setup
+```
+2. Create a virtual environment and install requirements
+
+```bash
+python3 -m venv iframe-status-page
+source iframe-status-page/bin/activate
+python3 -m pip install -r requirements.txt
+```
+
+3. If you updated the name of the envionment, you will need to modify the path in the bin/python file to match. Also you need ot make sure the bin/python file is executable.
+
+```bash
+chmod +x bin/python
 ```
 
 ## Configuration
 
-1. Open the `views/layout.erb` file in your preferred text editor.
+1. Open the `templates/layout.html` file in your preferred text editor.
 
 2. Update the URL in the iFrame to point to your external dashboard:
 
@@ -49,7 +51,7 @@ bin/setup
 ```yml
 name: System Status
 description: |-
-   HPC node status
+   HPC Status Page
 category: System
 subcategory: System Information
 icon: fa://bar-chart
@@ -63,17 +65,17 @@ To verify that the app is working correctly:
 1. Ensure that Open OnDemand can access the app directory.
 2. Restart the Open OnDemand service if necessary.
 3. Log in to your Open OnDemand instance and look for the new app in the available apps list.
+4. Restart the "Web server" from the help menu in the top right of the dashboard.
 
 ## Usage
 
-Once installed and configured, users can access the embedded dashboard through the Open OnDemand interface. The external dashboard will be displayed within an iFrame in the Open OnDemand UI.
+Once installed and configured, users can access the embedded dashboard through the Open OnDemand interface. The external page will be displayed within an iFrame in the Open OnDemand UI.
 
 ## Troubleshooting
 
 If you encounter issues:
 
 - Check that the app directory permissions are correct, this is a common one, if your app doesnt show up in the browser, its either an issue with permissions or the local user webserver needs a restart.
-- Verify that the URL in `views/layout.erb` is accessible by the user and the Open OnDemand server.
 - Review Open OnDemand, and system logs for any error messages.
 
 ## Contributing
@@ -86,7 +88,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-- Based on the [OSC Status App](https://github.com/OSC/osc-systemstatus)
 - Developed for integration with [HPC Dashboard](https://github.com/thediymaker/slurm-node-status) and similar external monitoring tools
 
 For more information or support, please open an issue on the GitHub repository.
